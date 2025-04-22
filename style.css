@@ -1,134 +1,208 @@
-div img{
-    width: 100px;
-    height: 150px;
-    object-fit: contain;
+/* 
+    Estilo para las imágenes dentro de los elementos <div>.
+    Se define un tamaño fijo y se ajusta la imagen sin deformarla ni recortarla.
+*/
+div img {
+    width: 100px; /* Ancho fijo de la imagen */
+    height: 150px; /* Alto fijo de la imagen */
+    object-fit: contain; /* Hace que la imagen se ajuste completamente dentro del contenedor, manteniendo su relación de aspecto */
 }
-/*colores hexadecimales*/
-.color_hexadecimal_1{
-    background-color:goldenrod ;
-}
-.color_hexadecimal_2{
-    background-color:antiquewhite;
-}
-.color_hexadecimal_3{
-    background-color:goldenrod ;
-}
-.color_hexadecimal_4{
-    background-color:antiquewhite;
-}
-/*Colores RGB*/
-.color_RGB_1{
-    background-color: rgb(233, 27, 27);
-}
-.color_RGB_2{
-    background-color: rgb(236, 214, 214);
-}
-.color_RGB_3{
-    background-color: rgb(233, 27, 27);
-}
-.color_RGB_4{
-    background-color: rgb(236, 214, 214);
-}
-.color_RGB_5{
-    background-color: rgb(233, 27, 27);
-}
-/*Color gradiente lineal y radial*/
-.Gradiente_lineal{
-    background: linear-gradient( red, yellow);
-}
-.Gradiente_radial{
-    background: radial-gradient(circle, blue, purple);
 
+/* 
+    COLORES HEXADECIMALES (aunque están escritos como nombres de color estándar).
+    Se asignan colores de fondo utilizando valores de tipo nombre, que internamente son interpretados como valores hexadecimales.
+*/
+.color_hexadecimal_1 {
+    background-color: goldenrod; /* Dorado oscuro */
 }
-/*Estilos de texto*/
-.Style_text p{
-    text-transform: lowercase;
-    letter-spacing: 1ch;
-    text-shadow: 2px 1px 4px red;
+.color_hexadecimal_2 {
+    background-color: antiquewhite; /* Blanco antiguo, tono beige claro */
+}
+.color_hexadecimal_3 {
+    background-color: goldenrod;
+}
+.color_hexadecimal_4 {
+    background-color: antiquewhite;
+}
+
+/* 
+    COLORES DEFINIDOS CON RGB
+    Aquí se utilizan valores RGB para definir colores personalizados.
+    rgb(rojo, verde, azul)
+*/
+.color_RGB_1 {
+    background-color: rgb(233, 27, 27); /* Rojo intenso */
+}
+.color_RGB_2 {
+    background-color: rgb(236, 214, 214); /* Rosa pálido */
+}
+.color_RGB_3 {
+    background-color: rgb(233, 27, 27);
+}
+.color_RGB_4 {
+    background-color: rgb(236, 214, 214);
+}
+.color_RGB_5 {
+    background-color: rgb(233, 27, 27);
+}
+
+/* 
+    DEGRADADO LINEAL
+    Transición de color de arriba hacia abajo o en línea recta.
+*/
+.Gradiente_lineal {
+    background: linear-gradient(red, yellow); /* Pasa de rojo a amarillo */
+}
+
+/* 
+    DEGRADADO RADIAL
+    Comienza en el centro y se expande en círculos.
+*/
+.Gradiente_radial {
+    background: radial-gradient(circle, blue, purple); /* De azul al centro hacia púrpura en el exterior */
+}
+
+/* 
+    ESTILOS DE TEXTO PARA UNA CLASE
+    Se aplican transformaciones visuales a los textos dentro de .Style_text
+*/
+.Style_text p {
+    text-transform: lowercase; /* Convierte todo el texto en minúsculas */
+    letter-spacing: 1ch; /* Espaciado entre letras igual a un carácter */
+    text-shadow: 2px 1px 4px red; /* Sombra roja debajo del texto con desplazamiento y difuminado */
 }
 
 .Style_text {
-    background: radial-gradient(circle, black, red ) ;
+    background: radial-gradient(circle, black, red); /* Fondo degradado del centro negro hacia rojo en los bordes */
 }
 
-/*Fuente personalizada de google fonts*/
-.Funte_personalizada{
+/* 
+    FUENTE PERSONALIZADA DESDE GOOGLE FONTS
+    Se usa la fuente 'Bungee Spice' que debe estar importada previamente en HTML.
+*/
+.Funte_personalizada {
     font-family: "Bungee Spice", sans-serif;
-    font-weight: 400;
+    font-weight: 400; /* Peso normal */
     font-style: normal;
-    background: radial-gradient(circle, pink, rgb(0, 174, 255) );
+    background: radial-gradient(circle, pink, rgb(0, 174, 255)); /* Fondo degradado de rosa a celeste */
 }
 
-/*Unidades rem*/
-.Unidades_rem{
+/* 
+    USO DE UNIDADES 'rem'
+    rem = unidad relativa al tamaño de fuente base del documento (root).
+*/
+.Unidades_rem {
+    background: radial-gradient(circle, rgb(4, 238, 255), rgb(198, 21, 221)); /* Degradado azul a violeta */
+    font-weight: bold;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 1.5rem; /* 1.5 veces el tamaño base definido por el navegador */
+}
+
+/* 
+    USO DE UNIDADES 'em'
+    em = unidad relativa al tamaño de fuente del elemento padre.
+*/
+.Unidades_em {
     background: radial-gradient(circle, rgb(4, 238, 255), rgb(198, 21, 221));
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.5em; /* Escala con el tamaño del contenedor padre */
 }
 
-/*Unidades em*/
-.Unidades_em{
+/* 
+    UNIDADES DE VISTA (viewport): vh (alto), vw (ancho)
+    Estas clases adaptan elementos al tamaño de la ventana del navegador.
+*/
+.Unidades_vh_vw {
     background: radial-gradient(circle, rgb(4, 238, 255), rgb(198, 21, 221));
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.5em;
+    width: 35vw; /* 35% del ancho del viewport */
+    height: 20vh; /* 20% del alto del viewport */
 }
-.Unidades_vh_vw{
-    background: radial-gradient(circle, rgb(4, 238, 255), rgb(198, 21, 221));
-    width: 35vw;
-    height: 20vh;
+
+/* 
+    OBJECT-FIT CON VALOR 'none'
+    La imagen no se ajusta al contenedor (puede salirse).
+*/
+.Object-fit {
+    object-fit: none;
+    background: radial-gradient(circle, red, yellow); /* Fondo rojo al centro hacia amarillo */
 }
-/*Object-fit*/
-.Object-fit{
-    object-fit: none ;
-    background: radial-gradient(circle, red, yellow);
-}  
-@font-face{
+
+/* 
+    FUENTE PERSONALIZADA LOCAL CON @font-face
+    Se debe tener el archivo de fuente en la carpeta "fuentes".
+*/
+@font-face {
     font-family: "Mifuente";
-    src: url(fuentes/Saiyan-Sans.ttf);
+    src: url(fuentes/Saiyan-Sans.ttf); /* Ruta al archivo de fuente */
 }
-header h1{
-    font-family: "Mifuente", sans-serif  ;
-    font-size: 50px;
+
+/* 
+    ESTILOS PARA EL ENCABEZADO (header h1)
+    Se aplica la fuente personalizada y estilos visuales.
+*/
+header h1 {
+    font-family: "Mifuente", sans-serif;
+    font-size: 50px; /* Tamaño grande */
     color: black;
-    background-color: beige;
-    
+    background-color: beige; /* Fondo claro para resaltar */
 }
+
+/* 
+    ESTILOS GENERALES DEL CUERPO DEL DOCUMENTO
+    Se usa una imagen como fondo, con cobertura total y posición centrada.
+*/
 body {
-    font-family: sans-serif;
-    text-align: center;
-    background-image: url(img/Dragon-Ball-Z.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    
+    font-family: sans-serif; /* Fuente predeterminada sin serifas */
+    text-align: center; /* Centrado del texto */
+    background-image: url(img/Dragon-Ball-Z.jpg); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el fondo */
+    background-attachment: fixed; /* Fondo fijo, no se desplaza con el scroll */
+    background-position: center; /* Centrado horizontal y vertical */
 }
+
+/* 
+    GALERÍA DE IMÁGENES
+    Contenedor principal de la galería con un color de fondo semitransparente.
+*/
 .galeria {
-    max-width: 900px;
+    max-width: 900px; /* Ancho máximo */
     height: auto;
-    margin: 0 auto;
-    background-color: rgba(255, 217, 0, 0.767);
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: rgba(255, 217, 0, 0.767); /* Amarillo con transparencia (rgba) */
 }
-  
+
+/* 
+    ESTILOS PARA CADA ELEMENTO TIPO "TARJETA"
+    Se usan divs como tarjetas para imágenes o texto.
+*/
 div {
     height: 190px;
-    display: inline-block;
+    display: inline-block; /* Hace que se comporten como elementos en línea pero con propiedades de bloque */
     width: 150px;
-    margin: 10px;
+    margin: 10px; /* Espacio entre tarjetas */
     vertical-align: top;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
 }
-.item{
-    background: #00000050;
+
+/* 
+    ESTILO OPCIONAL PARA DIVS CON CLASE "item"
+    Fondo negro semitransparente (con opacidad).
+*/
+.item {
+    background: #00000050; /* Negro con 30% de opacidad (hex + alfa) */
 }
-  
-  
+
+/* 
+    TEXTO DENTRO DE CADA TARJETA
+    Se aplica cursiva, margen y negrita al texto de los divs.
+*/
 div p {
-    font-style: italic;
-    margin-top: 8px;
-    font-weight: bold;
+    font-style: italic; /* Texto inclinado */
+    margin-top: 8px; /* Separación superior del texto */
+    font-weight: bold; /* Negrita */
 }
+
 
   
