@@ -34,7 +34,7 @@ div img{
 }
 /*Color gradiente lineal y radial*/
 .Gradiente_lineal{
-    background: radial-gradient(circle, red, yellow);
+    background: linear-gradient( red, yellow);
 }
 .Gradiente_radial{
     background: radial-gradient(circle, blue, purple);
